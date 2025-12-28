@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matheus & Natalia — Desde 21/04/2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Elementos decorativos -->
+  <div class="decoration heart1"><i class="fas fa-heart"></i></div>
+  <div class="decoration heart2"><i class="fas fa-heart"></i></div>
+  <div class="decoration heart3"><i class="fas fa-heart"></i></div>
+  <div class="decoration heart4"><i class="fas fa-heart"></i></div>
+  
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header class="hero">
+      <div class="couple-container">
+        <div class="name-circle name-left">Matheus</div>
+        <div class="hearts-between"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></div>
+        <div class="name-circle name-right">Natalia</div>
+      </div>
+      <p class="lead">Juntos desde <strong class="date-highlight">21 de abril de 2025</strong></p>
+    </header>
+
+    <!-- Timer -->
+    <section class="timer-card">
+      <div class="section-header">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Tempo Juntos</h2>
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <p class="section-subtitle">Cada segundo ao seu lado é um momento especial</p>
+      
+      <div class="timer-row">
+        <div class="time-pill">
+          <div class="num" id="years">00</div>
+          <div class="lbl">Anos</div>
+        </div>
+        <div class="time-pill">
+          <div class="num" id="months">00</div>
+          <div class="lbl">Meses</div>
+        </div>
+        <div class="time-pill">
+          <div class="num" id="days">00</div>
+          <div class="lbl">Dias</div>
+        </div>
+        <div class="time-pill">
+          <div class="num" id="hours">00</div>
+          <div class="lbl">Horas</div>
+        </div>
+        <div class="time-pill">
+          <div class="num" id="minutes">00</div>
+          <div class="lbl">Minutos</div>
+        </div>
+        <div class="time-pill">
+          <div class="num" id="seconds">00</div>
+          <div class="lbl">Segundos</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="gallery-card">
+      <div class="section-header">
+        <i class="fas fa-images"></i>
+        <h2>Nossa Galeria</h2>
+        <i class="fas fa-images"></i>
+      </div>
+      <p class="section-subtitle">Momentos especiais que vivemos juntos</p>
+      
+      <div class="gallery-container">
+        <div class="big-view">
+          <div class="image-counter">
+            <span id="current-img">1</span> / <span id="total-img">0</span>
+          </div>
+          <button id="prevBtn" class="nav-btn left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="image-container">
+            <div id="loading" class="loading">
+              <i class="fas fa-spinner fa-spin"></i>
+              <p>Carregando fotos...</p>
+            </div>
+            <img id="bigImg" alt="Foto" class="main-image" style="display: none;">
+            <div class="image-overlay">
+              <p class="image-date" id="image-date"></p>
+              <p class="image-desc" id="image-desc"></p>
+            </div>
+          </div>
+          <button id="nextBtn" class="nav-btn right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        
+        <div id="thumbs" class="thumbs"></div>
+        
+        <div class="gallery-controls">
+          <button id="playSlideshow" class="control-btn">
+            <i class="fas fa-play"></i> Reproduzir
+          </button>
+          <button id="fullscreenBtn" class="control-btn">
+            <i class="fas fa-expand"></i> Tela Cheia
+          </button>
+          <button id="refreshBtn" class="control-btn">
+            <i class="fas fa-sync-alt"></i> Atualizar Fotos
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+    </footer>
+  </div>
+
+  <!-- Modal para visualização de imagem em tela cheia -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" alt="Foto em tela cheia">
+      <div class="modal-info">
+        <p id="modalDate"></p>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
