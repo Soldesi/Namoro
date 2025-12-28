@@ -137,9 +137,9 @@ async function loadPhotosFromFolder() {
     isPlaying = false;
     if (playSlideshowBtn) playSlideshowBtn.innerHTML = '<i class="fas fa-play"></i> Reproduzir';
 
-    // Nomes dos arquivos de foto/video
+   // Nomes dos arquivos de foto/video
     const photoFiles = [
-      'Imagem 5.jpeg','Imagem 3.jpeg','Imagem 2.jpeg','Imagem 4.jpeg','Imagem 1.jpeg'
+      'Imagem 5.jpeg','Imagem 3.jpeg','Imagem 1.jpeg','Imagem 2.jpeg','Imagem 4.jpeg'
     ];
 
     // DESCRIÇÕES FIXAS PARA CADA FOTO
